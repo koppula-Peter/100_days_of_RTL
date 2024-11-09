@@ -11,11 +11,11 @@ Here's the link to the [https://www.linkedin.com/posts/koppulapeter_100daysofrtl
 ## Table of contents
 | S No | EDAPlayground Link | Github |
 | --- | ---- | ---- |
-| 1 | https://www.edaplayground.com/x/9Zwf | [Day 1: N-bit Binary Parallel Adder (parameter,generate).](https://github.com/raulbehl/100DaysOfRTL/tree/main/day1)     |
-| 2 | https://www.edaplayground.com/x/RmJF | [Day 2: N-bit Carry Look Ahead Adder (parameter,generate).](https://github.com/raulbehl/100DaysOfRTL/tree/main/day2)    |
-| 3 | https://www.edaplayground.com/x/AVMC | [Day 3: N-bit Carry Bypass Adder](https://github.com/raulbehl/100DaysOfRTL/tree/main/day3)                              |
-| 4 | https://www.edaplayground.com/x/TPdQ | [Day 4: N-bit Binary to Gray and Gray to Binary Convertor](https://github.com/raulbehl/100DaysOfRTL/tree/main/day4)     |
-| 5 | https://www.edaplayground.com/x/qzmr | [Day 5:  N-bit Binary to BCD and BCD to Binary Convertor](https://github.com/raulbehl/100DaysOfRTL/tree/main/day5)      |
+| 1 | https://www.edaplayground.com/x/9Zwf | [Day 1: N-bit Binary Parallel Adder (parameter,generate).](https://github.com/koppula-Peter/100_days_of_RTL.git)     |
+| 2 | https://www.edaplayground.com/x/RmJF | [Day 2: N-bit Carry Look Ahead Adder (parameter,generate).](https://github.com/koppula-Peter/100_days_of_RTL.git)    |
+| 3 | https://www.edaplayground.com/x/AVMC | [Day 3: N-bit Carry Bypass Adder](https://github.com/koppula-Peter/100_days_of_RTL.git)                              |
+| 4 | https://www.edaplayground.com/x/TPdQ | [Day 4: N-bit Binary to Gray and Gray to Binary Convertor](https://github.com/koppula-Peter/100_days_of_RTL.git)     |
+| 5 | https://www.edaplayground.com/x/qzmr | [Day 5:  N-bit Binary to BCD and BCD to Binary Convertor](https://github.com/koppula-Peter/100_days_of_RTL.git)      |
 
 
 
