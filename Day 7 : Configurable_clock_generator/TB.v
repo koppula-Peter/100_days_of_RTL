@@ -1,23 +1,22 @@
-
-`timescale 10ps / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 06.12.2024 01:46:07
-// Design Name: 
-// Module Name: tb_clock_gen
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
+//`timescale 100ps / 1ps
+////////////////////////////////////////////////////////////////////////////////////
+//// Company: 
+//// Engineer: 
+//// 
+//// Create Date: 06.12.2024 01:46:07
+//// Design Name: 
+//// Module Name: tb_clock_gen
+//// Project Name: 
+//// Target Devices: 
+//// Tool Versions: 
+//// Description: 
+//// 
+//// Dependencies: 
+//// 
+//// Revision:
+//// Revision 0.01 - File Created
+//// Additional Comments:
+//// 
 
 `timescale 1ns/1ps
 
@@ -67,3 +66,31 @@ module tb_clk_generator;
     end
 
 endmodule
+
+
+//module tb;
+//  wire clk1;
+//  wire clk2;
+//  wire clk3;
+//  wire clk4;
+//  reg  enable;
+//  reg [7:0] dly;
+
+//  clock_gen u0(enable, clk1);
+//  clock_gen #(.FREQ(200000)) u1(enable, clk2);
+//  clock_gen #(.FREQ(400000)) u2(enable, clk3);
+//  clock_gen #(.FREQ(800000)) u3(enable, clk4);
+
+//  initial begin
+//    enable <= 0;
+
+//    for (int i = 0; i < 10; i= i+1) begin
+//      dly = $random;
+//      #(dly) enable <= ~enable;
+//      $display("i=%0d dly=%0d", i, dly);
+//      #50;
+//    end
+
+//    #50 $finish;
+//  end
+//endmodule
