@@ -17,7 +17,8 @@ Here's the link to the [https://www.linkedin.com/posts/koppulapeter_100daysofrtl
 | 4 | https://www.edaplayground.com | [Day 4: N-bit Binary to Gray and Gray to Binary Convertor](https://github.com/koppula-Peter/100_days_of_RTL.git)     |
 | 5 | https://www.edaplayground.com | [Day 5:  N-bit Binary to BCD and BCD to Binary Convertor](https://github.com/koppula-Peter/100_days_of_RTL.git)      |
 | 6 | https://www.edaplayground.com | [Day 6:  N-bit Overflow, Factorial, GCF ](https://github.com/koppula-Peter/100_days_of_RTL.git)                      |
-
+| 7 | https://www.edaplayground.com | [Day 7:  Configurable clock generator](https://github.com/koppula-Peter/100_days_of_RTL.git)                         |
+| 8 | https://www.edaplayground.com | [Day 8:  Latches - Nand, Nor ](https://github.com/koppula-Peter/100_days_of_RTL.git)                                 |
 
 
 
