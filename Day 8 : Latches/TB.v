@@ -1,94 +1,95 @@
-
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 14.12.2024 11:55:27
-// Design Name: 
-// Module Name: tb_latches
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
+// Testbench for Latches Module
 //////////////////////////////////////////////////////////////////////////////////
 
+module latches_tb;
 
-`timescale 1ns / 1ps
+    // Inputs
+    reg a;
+    reg b;
 
-module tb_latches;
+    // Outputs
+    wire sr_q_nor, sr_qn_nor, sr_q_nand, sr_qn_nand;
+    wire jk_q_nor, jk_qn_nor, jk_q_nand, jk_qn_nand;
+    wire d_q_nor, d_qn_nor, d_q_nand, d_qn_nand;
 
-    // Testbench inputs
-    reg a, b;
-
-    // Testbench outputs
-    wire sr_q, sr_qn;
-    wire jk_q, jk_qn;
-    wire d_q, d_qn;
-
-    // Instantiate the latches module
+    // Instantiate the Unit Under Test (UUT)
     latches uut (
-        .a(a),
-        .b(b),
-        .sr_q(sr_q),
-        .sr_qn(sr_qn),
-        .jk_q(jk_q),
-        .jk_qn(jk_qn),
-        .d_q(d_q),
-        .d_qn(d_qn)
+        .a(a), 
+        .b(b), 
+        .sr_q_nor(sr_q_nor), 
+        .sr_qn_nor(sr_qn_nor), 
+        .sr_q_nand(sr_q_nand), 
+        .sr_qn_nand(sr_qn_nand), 
+        .jk_q_nor(jk_q_nor), 
+        .jk_qn_nor(jk_qn_nor), 
+        .jk_q_nand(jk_q_nand), 
+        .jk_qn_nand(jk_qn_nand), 
+        .d_q_nor(d_q_nor), 
+        .d_qn_nor(d_qn_nor), 
+        .d_q_nand(d_q_nand), 
+        .d_qn_nand(d_qn_nand)
     );
 
-    // Testbench variables
     initial begin
-        // Initialize inputs
+        // Initialize Inputs
+        $display("Starting Simulation");
+
         a = 0; b = 0;
         #10;
+        $display("[SR NOR] a=%b b=%b => Q=%b Qn=%b", a, b, sr_q_nor, sr_qn_nor);
+        $display("[SR NAND] a=%b b=%b => Q=%b Qn=%b", a, b, sr_q_nand, sr_qn_nand);
 
-        // Test SR latch behavior
-        $display("Testing SR Latch");
-        a = 1; b = 0; #10;
-        $display("SR Set: sr_q = %b, sr_qn = %b", sr_q, sr_qn);
+        a = 0; b = 1;
+        #10;
+        $display("[SR NOR] a=%b b=%b => Q=%b Qn=%b", a, b, sr_q_nor, sr_qn_nor);
+        $display("[SR NAND] a=%b b=%b => Q=%b Qn=%b", a, b, sr_q_nand, sr_qn_nand);
 
-        a = 0; b = 1; #10;
-        $display("SR Reset: sr_q = %b, sr_qn = %b", sr_q, sr_qn);
+        a = 1; b = 0;
+        #10;
+        $display("[SR NOR] a=%b b=%b => Q=%b Qn=%b", a, b, sr_q_nor, sr_qn_nor);
+        $display("[SR NAND] a=%b b=%b => Q=%b Qn=%b", a, b, sr_q_nand, sr_qn_nand);
 
-        a = 0; b = 0; #10;
-        $display("SR Hold: sr_q = %b, sr_qn = %b", sr_q, sr_qn);
+        a = 1; b = 1;
+        #10;
+        $display("[SR NOR] a=%b b=%b => Q=%b Qn=%b", a, b, sr_q_nor, sr_qn_nor);
+        $display("[SR NAND] a=%b b=%b => Q=%b Qn=%b", a, b, sr_q_nand, sr_qn_nand);
 
-        a = 1; b = 1; #10;
-        $display("SR Invalid: sr_q = %b, sr_qn = %b", sr_q, sr_qn);
+        // Test JK Latch
+        a = 0; b = 0;
+        #10;
+        $display("[JK NOR] a=%b b=%b => Q=%b Qn=%b", a, b, jk_q_nor, jk_qn_nor);
+        $display("[JK NAND] a=%b b=%b => Q=%b Qn=%b", a, b, jk_q_nand, jk_qn_nand);
 
-        // Test JK latch behavior
-        $display("\nTesting JK Latch");
-        a = 1; b = 0; #10;
-        $display("JK Set: jk_q = %b, jk_qn = %b", jk_q, jk_qn);
+        a = 0; b = 1;
+        #10;
+        $display("[JK NOR] a=%b b=%b => Q=%b Qn=%b", a, b, jk_q_nor, jk_qn_nor);
+        $display("[JK NAND] a=%b b=%b => Q=%b Qn=%b", a, b, jk_q_nand, jk_qn_nand);
 
-        a = 0; b = 1; #10;
-        $display("JK Reset: jk_q = %b, jk_qn = %b", jk_q, jk_qn);
+        a = 1; b = 0;
+        #10;
+        $display("[JK NOR] a=%b b=%b => Q=%b Qn=%b", a, b, jk_q_nor, jk_qn_nor);
+        $display("[JK NAND] a=%b b=%b => Q=%b Qn=%b", a, b, jk_q_nand, jk_qn_nand);
 
-        a = 0; b = 0; #10;
-        $display("JK Hold: jk_q = %b, jk_qn = %b", jk_q, jk_qn);
+        a = 1; b = 1;
+        #10;
+        $display("[JK NOR] a=%b b=%b => Q=%b Qn=%b", a, b, jk_q_nor, jk_qn_nor);
+        $display("[JK NAND] a=%b b=%b => Q=%b Qn=%b", a, b, jk_q_nand, jk_qn_nand);
 
-        a = 1; b = 1; #10;
-        $display("JK Toggle: jk_q = %b, jk_qn = %b", jk_q, jk_qn);
+        // Test D Latch
+        a = 0; b = 0;
+        #10;
+        $display("[D NOR] a=%b b=%b => Q=%b Qn=%b", a, b, d_q_nor, d_qn_nor);
+        $display("[D NAND] a=%b b=%b => Q=%b Qn=%b", a, b, d_q_nand, d_qn_nand);
 
-        // Test D latch behavior
-        $display("\nTesting D Latch");
-        a = 1; #10;
-        $display("D Set: d_q = %b, d_qn = %b", d_q, d_qn);
+        a = 1; b = 0;
+        #10;
+        $display("[D NOR] a=%b b=%b => Q=%b Qn=%b", a, b, d_q_nor, d_qn_nor);
+        $display("[D NAND] a=%b b=%b => Q=%b Qn=%b", a, b, d_q_nand, d_qn_nand);
 
-        a = 0; #10;
-        $display("D Reset: d_q = %b, d_qn = %b", d_q, d_qn);
-
+        // End simulation
         $finish;
     end
 
 endmodule
-
