@@ -20,7 +20,7 @@ Here's the link to the [https://www.linkedin.com/posts/koppulapeter_100daysofrtl
 | 7 | https://www.edaplayground.com | [Day 7:  Configurable clock generator](https://github.com/koppula-Peter/100_days_of_RTL.git)                         |
 | 8 | https://www.edaplayground.com | [Day 8:  Latches - Nand, Nor ](https://github.com/koppula-Peter/100_days_of_RTL.git)                                 |
 | 9 | https://www.edaplayground.com | [Day 9:  Flip Flops ](https://github.com/koppula-Peter/100_days_of_RTL.git)                                          |
-
+| 10 | https://www.edaplayground.com | [Day 10: N - bit Counters up,down,updown (sync,async)](https://github.com/koppula-Peter/100_days_of_RTL.git)        |                                         
 
 
 
