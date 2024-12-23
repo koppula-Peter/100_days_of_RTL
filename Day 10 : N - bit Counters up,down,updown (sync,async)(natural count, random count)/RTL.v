@@ -21,7 +21,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module  Up_down_counters #(parameter N=8,mode=1)(input rst,clk, output reg [N-1:0]count);
+module  Up_down_counters #(parameter N=8,mode=1)(input rst,clk, output reg [N-1:0]count);//natural_count, but in case of specific count we have to design with help of flip flops and synchronous counter designing
 
 //reg [N-1:0] count_temp;
 
